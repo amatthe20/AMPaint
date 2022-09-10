@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="BorderPane" prefHeight="900" prefWidth="900" fx:controller="ampaint.paintController">
+    
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <MenuItem text="Open" onAction="#onOpenFile" />
+                    <MenuItem text="Save" onAction="#onSave"/>
+                    <MenuItem text="Save As" onAction="#onSaveAs"/>
+                    <MenuItem text="Close" onAction="#onClose"/>
+                </Menu>
+            </MenuBar> 
+            <ToolBar>
+                <HBox alignment="CENTER_RIGHT" spacing="5">
+                    <TextField fx:id="brushSize" text="10"/>
+                    <ColorPicker fx:id="colorPicker"/>
+                    <CheckBox fx:id="eraser" text="Eraser"/>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+    
+    <center> 
+        <Canvas fx:id="canvas" width="900" height="900"/>
+    </center>
+    
+</BorderPane>
