@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.Canvas?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="BorderPane" prefHeight="900" prefWidth="900" fx:controller="ampaint.paintController">
-    
+<BorderPane id="borderPane" prefHeight="200.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ampaint.paintController"> 
     <top>
         <VBox>
             <MenuBar>
@@ -18,19 +17,32 @@
                     <MenuItem text="Save As" onAction="#onSaveAs"/>
                     <MenuItem text="Close" onAction="#onClose"/>
                 </Menu>
-            </MenuBar> 
+                <Menu text="Tools">
+                    <MenuItem text="Free Draw" onAction="#FreeDraw"/>
+                    <MenuItem text="Line" onAction="#Line"/>
+                </Menu>
+                <Menu text="Help">
+                    <MenuItem text="Help"/>
+                    <MenuItem text="About" onAction="#onAbout"/>
+                </Menu>
+            </MenuBar>
             <ToolBar>
-                <HBox alignment="CENTER_RIGHT" spacing="5">
-                    <TextField fx:id="brushSize" text="10"/>
+                <HBox alignment="CENTER_RIGHT" spacing="8">
+                    <TextField fx:id="brushSize" text="" promptText="Line Thickness"/>
                     <ColorPicker fx:id="colorPicker"/>
-                    <CheckBox fx:id="eraser" text="Eraser"/>
+                    <CheckBox fx:id="eraser" text="Eraser" onAction="#erase"/>
+                    <Button text="Clear Canvas" onAction="#onClearCanvas"/>
                 </HBox>
             </ToolBar>
         </VBox>
     </top>
-    
-    <center> 
-        <Canvas fx:id="canvas" width="900" height="900"/>
+
+    <center>
+        <ScrollPane hbarPolicy="AS_NEEDED" vbarPolicy="ALWAYS" focusTraversable="false">
+            <content>
+                <Canvas fx:id="canvas"/>
+            </content>
+        </ScrollPane>
     </center>
-    
+
 </BorderPane>

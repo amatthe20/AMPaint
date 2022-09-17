@@ -15,7 +15,7 @@ public class AMPaint extends Application {
         
         Scene scene = new Scene(root);
         
-        stage.setTitle("Java Paint App");
+        stage.setTitle("AMPaint App");
         stage.setScene(scene);
         stage.show();
 
