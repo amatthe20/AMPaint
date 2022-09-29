@@ -7,42 +7,62 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.Canvas?>
 
-<BorderPane id="borderPane" prefHeight="200.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ampaint.paintController"> 
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="borderPane" prefHeight="200.0" fx:controller="ampaint.paintController"> 
     <top>
         <VBox>
             <MenuBar>
-                <Menu text="File">
-                    <MenuItem text="Open" onAction="#onOpenFile" />
-                    <MenuItem text="Save" onAction="#onSave"/>
-                    <MenuItem text="Save As" onAction="#onSaveAs"/>
-                    <MenuItem text="Close" onAction="#onClose"/>
+                <Menu text="_File">
+                    <MenuItem accelerator="Shortcut+O" onAction="#onOpenFile" text="Open"/>
+                    <MenuItem accelerator="Shortcut+S" onAction="#onSave" text="Save"/>
+                    <MenuItem accelerator="Shortcut+Shift+S" onAction="#onSaveAs" text="Save As"/>
+                    <MenuItem accelerator="Shortcut+X" onAction="#onClose" text="Close"/>
                 </Menu>
                 <Menu text="Tools">
-                    <MenuItem text="Free Draw" onAction="#FreeDraw"/>
-                    <MenuItem text="Line" onAction="#Line"/>
+                    <MenuItem fx:id="pencil" text="Pencil" onAction="#pencil"/>
+                    <Menu text="Line">
+                        <MenuItem fx:id="straight" text="Straight" onAction="#line"/>
+                        <MenuItem fx:id="dashed" text="Dashed" onAction="#dashed" />
+                    </Menu>
+                </Menu>
+                <Menu text="Shapes">
+                    <MenuItem fx:id="square" text="Square" onAction="#aSquare"/>
+                    <MenuItem fx:id="rectangle" text="Rectangle" onAction="#aRectangle"/> 
+                    <MenuItem fx:id="circle" text="Circle" onAction="#aCircle"/>
+                    <MenuItem fx:id="ellipse" text="Ellipse" onAction="#anEllipse"/>
                 </Menu>
                 <Menu text="Help">
-                    <MenuItem text="Help"/>
+                    <MenuItem text="Help" onAction="#onHelp"/>
                     <MenuItem text="About" onAction="#onAbout"/>
                 </Menu>
             </MenuBar>
             <ToolBar>
                 <HBox alignment="CENTER_RIGHT" spacing="8">
-                    <TextField fx:id="brushSize" text="" promptText="Line Thickness"/>
-                    <ColorPicker fx:id="colorPicker"/>
-                    <CheckBox fx:id="eraser" text="Eraser" onAction="#erase"/>
-                    <Button text="Clear Canvas" onAction="#onClearCanvas"/>
+                    <Button fx:id="newTabButton" text="New Canvas"/>
+                    <Label fx:id="option"/>
+                    <TextField fx:id="brushSize" text="10" promptText="Line Thickness"/>
+                    <ColorPicker fx:id="colorPicker" editable="true"/>
+                    <CheckBox fx:id="eraser" onMouseClicked="#erase" onMouseDragged="#erase" onMouseReleased="#erase" text="Eraser"/>
+                    <Button onAction="#onClearCanvas" text="Clear Canvas"/>
+                    <ToggleButton fx:id="colorGrabber" text="Color Grabber" onAction="#onColorGrab"/>
                 </HBox>
             </ToolBar>
         </VBox>
     </top>
 
     <center>
-        <ScrollPane hbarPolicy="AS_NEEDED" vbarPolicy="ALWAYS" focusTraversable="false">
-            <content>
-                <Canvas fx:id="canvas"/>
-            </content>
-        </ScrollPane>
+        <TabPane fx:id="tabPane">
+            <tabs>
+                <Tab fx:id="tab">
+                    <content>
+                        <ScrollPane focusTraversable="false" hbarPolicy="AS_NEEDED" vbarPolicy="ALWAYS">
+                            <content>
+                                <ampaint.NewCanvas fx:id="canvas" />
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
     </center>
 
 </BorderPane>
