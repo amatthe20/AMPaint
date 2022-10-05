@@ -2,21 +2,30 @@ package ampaint;
 
 import java.io.File;
 import java.util.Optional;
+import javafx.scene.Cursor;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Popup;
 
 public class NewCanvas extends Canvas {
 
     protected GraphicsContext app;
     private boolean isClickedFirst = true;
+    private double angle;
+    private int sides;
+    private TextInputDialog shape1, shape2;
     //public Image image;
 
     public NewCanvas() {
@@ -47,7 +56,6 @@ public class NewCanvas extends Canvas {
             ImageView iv = new ImageView(wi);
             return iv.getImage();
         }
-
 
     public void setDimensions(int width, int height) {     // for resizing canvas
         this.setWidth(width);
@@ -86,17 +94,11 @@ public class NewCanvas extends Canvas {
         }
     }
 
-    public void drawStraightLine(double x, double y) {      // drawing a straight line
-        this.app.lineTo(x, y);
-    }
-
-
     public void drawDashedLine(double size, double x, double y) {     // drawing a dashed line
         this.app.setLineDashes(3*size);
         this.app.setLineDashOffset(4);
         this.app.lineTo(x, y);
     }
-
 
     public void drawRectangle(double x1, double y1, double x2, double y2) {
         double x = Math.min(x1, x2);
@@ -107,24 +109,52 @@ public class NewCanvas extends Canvas {
     }
 
     public void drawSquare(double x1, double y1, double x2, double y2) {
-        final double ANGLE_45 = Math.PI / 4.0;    // a 45 degree angle makes it a square
-        final int SIDES = 4;
-        double[] xPoints = new double[SIDES];   // a square has 4 sides
+        drawShape(4.0,4,x1,y1,x2,y2);
+    }
+
+    public void drawTriangle(double x1, double y1, double x2, double y2) {
+        drawShape(6.0,3,x1,y1,x2,y2);
+    }
+
+    public void drawShape(double angle, int sides, double x1, double y1, double x2, double y2) {
+        final double ANGLE = Math.PI / angle;    // for placing the shape in an orientation
+        final int SIDES = sides;
+        double[] xPoints = new double[SIDES];    // gets the sides
         double[] yPoints = new double[SIDES];
-        double radius = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
-        for (int i = 0; i < SIDES; i++) {
-            xPoints[i] = x1 + (radius * Math.cos(((2 * Math.PI * i) / 4) + ANGLE_45));
-            yPoints[i] = y1 + (radius * Math.sin(((2 * Math.PI * i) / 4) + ANGLE_45));
+        double radius = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));      // calculates the radius
+        for (int i = 0; i < SIDES; i++) {        // for each side
+            xPoints[i] = x1 + (radius * Math.cos(((2 * Math.PI * i) / sides) + ANGLE));  // draw shape
+            yPoints[i] = y1 + (radius * Math.sin(((2 * Math.PI * i) / sides) + ANGLE));
         }
         this.app.strokePolygon(xPoints, yPoints, SIDES);
     }
 
+    public void drawShapeAngle() {    // for drawShape function (gets the angle)
+        shape1 = new TextInputDialog("Enter number as double (i.e. 5.0)");
+        shape1.setTitle("New Shape");
+        shape1.setHeaderText("Enter the preferred angle over pi");
+        shape1.showAndWait();
+        angle = Double.parseDouble(shape1.getEditor().getText());
+    }
+
+    public double getDrawShapeAngle() {return angle;}
+
+    public void drawShapeSides() {       // for drawShape function (gets the sides)
+        shape2 = new TextInputDialog("Enter number as an integer (i.e. 5)");
+        shape2.setTitle("New Shape");
+        shape2.setHeaderText("Enter the number of sides");
+        shape2.showAndWait();
+        sides = Integer.parseInt(shape2.getEditor().getText());
+    }
+
+    public int getDrawShapeSides() {return sides;}
+
     public void drawCircle(double x1, double y1, double x2, double y2) {
-        double x = Math.min(x1, x2);
-        double y = Math.min(y1, y2);
+        double x = Math.min(x1, x2);     // gets x
+        double y = Math.min(y1, y2);     // gets y
         double s = Math.abs(x1 - x2);
         double t = Math.abs(y1 - y2);
-        this.app.strokeOval(x, y, s, s);
+        this.app.strokeOval(x, y, s, s);      
     }
 
     public void drawEllipse(double x1, double y1, double x2, double y2) {

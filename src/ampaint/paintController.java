@@ -17,6 +17,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
@@ -24,9 +25,9 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 
 public class paintController implements Initializable {
@@ -49,18 +50,21 @@ public class paintController implements Initializable {
 
     @FXML protected ToggleButton colorGrabber;
 
+    @FXML private ToggleButton mode;            // used for toggling between dark and light mode
 
-    protected double size;
+    @FXML private MenuItem undo;
 
+    @FXML private MenuItem redo;
+
+    @FXML private MenuItem copy;
+
+    @FXML private MenuItem paste;
+
+    private double size;                        // used for converting textfield input into a double
     private static double x1, y1, x2, y2;
-
-    private boolean isToggled = false;
-    
     private File saved;
+    public Stage stage;
 
-    //GraphicsContext app;      // for activating the canvas
-
-    
     public void onOpenFile() {   // Open
         canvas.getApp();
     
@@ -68,13 +72,11 @@ public class paintController implements Initializable {
         fileChooser.setTitle("Open Image");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files (*png,*jpg,*jpeg,*bmp)", "*.png", "*.jpg", "*.jpeg", "*.bmp"));
 
-        File fileObj = fileChooser.showOpenDialog(null);     // file dialog opener
+        File fileObj = fileChooser.showOpenDialog(stage);     // file dialog opener
         Image image = new Image(fileObj.toURI().toString());
         canvas.drawImage(fileObj);   // canvas file
         canvas.drawImage(image);    // new canvas
-        //canvas.setWidth(image.getWidth());            // resizes canvas to fit image
-        //canvas.setHeight(image.getHeight());
-        //canvas.getApp().drawImage(image, 0, 0);                  // new canvas
+        editMenu.updateUndoStack(canvas);
     }
     
     public void onSave() throws IOException {        // Save
@@ -86,7 +88,7 @@ public class paintController implements Initializable {
         FileChooser savedfile = new FileChooser();
         savedfile.setTitle("Save Image");
 
-        saved = savedfile.showSaveDialog(null);       // shows the file dialog but in save mode
+        saved = savedfile.showSaveDialog(stage);       // shows the file dialog but in save mode
         if (saved != null) {
             try {
                 WritableImage writImage = new WritableImage((int) canvas.getWidth(), (int) canvas.getWidth());     // saves image in the width and height then
@@ -124,8 +126,6 @@ public class paintController implements Initializable {
     }
     
 
-
-
     /* methods for the help menu items */
 
     public void onAbout() {
@@ -139,261 +139,303 @@ public class paintController implements Initializable {
     }
 
 
-
     /* methods for the shapes menu */
 
-    public void aSquare() {     // draws a filled square
+    public void aSquare() {     // draws a square
         size = Double.parseDouble(brushSize.getText());
-        
         canvas.setOnMousePressed(e-> {
-            if(eraser.isSelected()) erase(e);
             x1 = e.getX();
             y1 = e.getY();
         });
 
         canvas.setOnMouseDragged(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
-            canvas.setLineWidth(size);
-            canvas.setLineColor(colorPicker.getValue());
-            canvas.drawSquare(x1, y1, x2, y2);
-        
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee-> editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
             canvas.setLineWidth(size);
             canvas.setLineColor(colorPicker.getValue());
             canvas.drawSquare(x1, y1, x2, y2);
+            editMenu.updateUndoStack(canvas);
         });
     }
 
     public void aCircle() {                  // draws a filled circle
         size = Double.parseDouble(brushSize.getText());
-
         canvas.setOnMousePressed(e-> {
-            if(eraser.isSelected()) erase(e);
             x1 = e.getX();
             y1 = e.getY();
         });
 
         canvas.setOnMouseDragged(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
-            canvas.setLineWidth(size);
-            canvas.setLineColor(colorPicker.getValue());
-            canvas.drawCircle(x1, y1, x2, y2);
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
             canvas.setLineWidth(size);
             canvas.setLineColor(colorPicker.getValue());
             canvas.drawCircle(x1, y1, x2, y2);
+            editMenu.updateUndoStack(canvas);
         });
         
     }
 
     public void aRectangle() {         // draws a filled rectangle   
         size = Double.parseDouble(brushSize.getText());
-
         canvas.setOnMousePressed(e-> {
-            if(eraser.isSelected()) erase(e);
             x1 = e.getX();
             y1 = e.getY();
         });
 
         canvas.setOnMouseDragged(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
-            canvas.setLineWidth(size);
-            canvas.setLineColor(colorPicker.getValue());
-            canvas.drawRectangle(x1,y1,x2,y2);
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
             canvas.setLineWidth(size);
             canvas.setLineColor(colorPicker.getValue());
             canvas.drawRectangle(x1,y1,x2,y2);
+            editMenu.updateUndoStack(canvas);
         });
 
     }
 
     public void anEllipse() {          // draws a filled ellipse
         size = Double.parseDouble(brushSize.getText());
-
         canvas.setOnMousePressed(e-> {
-           if(eraser.isSelected()) erase(e);
             x1 = e.getX();
             y1 = e.getY();
         });
 
         canvas.setOnMouseDragged(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
-            canvas.setLineWidth(size);
-            canvas.setLineColor(colorPicker.getValue());
-            canvas.drawEllipse(x1,y1,x2,y2);
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e-> {
-            if(eraser.isSelected()) erase(e);
+            undo.setOnAction(ee->editMenu.undo(canvas));
             x2 = e.getX();
             y2 = e.getY();
             canvas.setLineWidth(size);
             canvas.setLineColor(colorPicker.getValue());
             canvas.drawEllipse(x1,y1,x2,y2);
+            editMenu.updateUndoStack(canvas);
         });
     }
 
 
-
-
-    public void line() {                    // draws a line
+    public void aTriangle() {          // draws a triangle pointing upwards
         size = Double.parseDouble(brushSize.getText());
         canvas.setOnMousePressed(e-> {
-            if(eraser.isSelected()) erase(e);
-            else{
-                canvas.getApp().beginPath();
-                canvas.setLineColor(colorPicker.getValue());
-                canvas.setLineWidth(size);
-                canvas.drawStraightLine(e.getX(), e.getY());
-            }
+            x1 = e.getX();
+            y1 = e.getY();
         });
 
         canvas.setOnMouseDragged(e-> {
-            if(eraser.isSelected()) erase(e);
-            canvas.setLineWidth(size);
-            canvas.drawStraightLine(e.getX(), e.getY());
-            canvas.getApp().stroke();
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            x2 = e.getX();
+            y2 = e.getY();
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e-> {
-            if(eraser.isSelected()) erase(e);
-            canvas.setLineColor(colorPicker.getValue());
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            x2 = e.getX();
+            y2 = e.getY();
             canvas.setLineWidth(size);
-            canvas.drawStraightLine(e.getX(), e.getY());
-            canvas.getApp().stroke();
-            canvas.getApp().closePath();
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.drawTriangle(x1,y1,x2,y2);
+            editMenu.updateUndoStack(canvas);
         });
     }
 
+    
+    public void aShape() {          // draws a shape using specifed number of sides and the angle it draws on
+        size = Double.parseDouble(brushSize.getText());
+        canvas.drawShapeAngle();
+        canvas.drawShapeSides();
+        canvas.setOnMousePressed(e-> {
+            x1 = e.getX();
+            y1 = e.getY();
+        });
+
+        canvas.setOnMouseDragged(e-> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            x2 = e.getX();
+            y2 = e.getY();
+            editMenu.updateUndoStack(canvas);
+        });
+
+        canvas.setOnMouseReleased(e-> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            x2 = e.getX();
+            y2 = e.getY();
+            canvas.setLineWidth(size);
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.drawShape(canvas.getDrawShapeAngle(),canvas.getDrawShapeSides(),x1,y1,x2,y2);
+            editMenu.updateUndoStack(canvas);
+        });
+    }
+    
+    
+
+    public void line() {        // draws a straight line
+        size = Double.parseDouble(brushSize.getText());
+        canvas.setOnMousePressed(e-> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.getApp().beginPath();
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.setLineWidth(size);
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.getApp().stroke();
+            editMenu.updateUndoStack(canvas);
+        });
+
+        canvas.setOnMouseDragged(e-> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.setLineWidth(size);
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.getApp().stroke();
+            editMenu.updateUndoStack(canvas);
+        });
+
+        canvas.setOnMouseReleased(e-> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.setLineWidth(size);
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.getApp().stroke();
+            canvas.getApp().closePath();
+            editMenu.updateUndoStack(canvas);
+        });
+    }
 
     public void dashed() {      // draws a dashed line
         size = Double.parseDouble(brushSize.getText());
         canvas.setOnMousePressed(e -> {
-            if(eraser.isSelected()) erase(e);  // checks if eraser is selected
-            else {
-                canvas.getApp().beginPath();
-                canvas.getApp().setLineWidth(size);
-                canvas.setLineColor(colorPicker.getValue());
-                canvas.drawDashedLine(size, e.getX(), e.getY());
-            }
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.getApp().beginPath();
+            canvas.getApp().setLineWidth(size);
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.drawDashedLine(size, e.getX(), e.getY());
+            canvas.getApp().stroke();
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseDragged(e -> {
-            if(eraser.isSelected()) erase(e);
-            else {
-                canvas.getApp().setLineWidth(size);
-                canvas.setLineColor(colorPicker.getValue());
-                canvas.drawDashedLine(size, e.getX(), e.getY());
-                canvas.getApp().stroke();
-            }
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.getApp().setLineWidth(size);
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.drawDashedLine(size, e.getX(), e.getY());
+            canvas.getApp().stroke();
+            editMenu.updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e -> {
-            if(eraser.isSelected()) erase(e);
-            else {
-                canvas.setLineWidth(size);
-                canvas.setLineColor(colorPicker.getValue());
-                canvas.drawDashedLine(size, e.getX(), e.getY());
-                canvas.getApp().stroke();
-                canvas.getApp().closePath();
-            }
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.setLineWidth(size);
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.drawDashedLine(size, e.getX(), e.getY());
+            canvas.getApp().stroke();
+            canvas.getApp().closePath();
+            editMenu.updateUndoStack(canvas);
         });
     }
 
     public void pencil() {            // default drawing tool
         size = Double.parseDouble(brushSize.getText());
-        canvas.setOnMousePressed(e -> {            
-            if(eraser.isSelected()) erase(e);     
-            else {
-                canvas.getApp().beginPath();
-                canvas.getApp().setLineWidth(size);
-                canvas.setLineColor(colorPicker.getValue());
-                canvas.getApp().moveTo(e.getX(), e.getY());
-                canvas.getApp().stroke();
-            }
+        canvas.setOnMousePressed(e -> {
+            undo.setOnAction(ee->editMenu.undo(canvas));    
+            canvas.getApp().beginPath();
+            canvas.setLineWidth(size);
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.getApp().moveTo(e.getX(), e.getY());
+            canvas.getApp().stroke();
+            editMenu.updateUndoStack(canvas);
         });
 
-        canvas.setOnMouseDragged(e -> {               
-            if(eraser.isSelected()) erase(e);
-            else {
-                canvas.getApp().lineTo(e.getX(), e.getY());
-                canvas.getApp().setLineWidth(size);
-                canvas.setLineColor(colorPicker.getValue());
-                canvas.getApp().stroke();       // draws continous line (no unwanted spaces)
-            }
+        canvas.setOnMouseDragged(e -> {
+            undo.setOnAction(ee->editMenu.undo(canvas));    
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.setLineWidth(size);
+            canvas.setLineColor(colorPicker.getValue());
+            canvas.getApp().stroke();       // draws continous line (no unwanted spaces)
+            editMenu.updateUndoStack(canvas);
         });
 
-        canvas.setOnMouseReleased(e -> {                      
-            if(eraser.isSelected()) erase(e);
-            else {
-                canvas.getApp().lineTo(e.getX(), e.getY());
-                canvas.getApp().setLineWidth(size);
-                canvas.getApp().stroke();
-                canvas.getApp().closePath();
-            }
+        canvas.setOnMouseReleased(e -> {   
+            undo.setOnAction(ee->editMenu.undo(canvas));    
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.setLineWidth(size);
+            canvas.getApp().stroke();
+            canvas.getApp().closePath();
+            editMenu.updateUndoStack(canvas);
         });
     }    
 
 
     /* buttons on the toolbar */
-    /*public void addNewTab(String lbl, Image i) {
-        CanvasTab t = new CanvasTab(lbl);
-        paintController.tab.getTabs().add(t);
-        paintController.tab.getSelectionModel().select(t);
-        t.setImage(i);
+    public void addNewTab() {
+        tabPane.getTabs().add(new CanvasTab());
     }
-
-    public void addNewTab(File f) throws FileNotFoundException {
-        CanvasTab t = new CanvasTab(f.getName());
-        t.savedFile = f;
-        paintController.tab.getTabs().add(t);
-        paintController.tab.getSelectionModel().select(t);
-        t.setImage(new Image(new FileInputStream(f)));
-    }*/
 
 
     public void onClearCanvas() {
+        undo.setOnAction(ee->editMenu.undo(canvas));
         canvas.clearCanvas();
+        editMenu.updateUndoStack(canvas);
     }
 
-    public void erase(MouseEvent e) {     // if the eraser checkbox gets checked
-        canvas.getApp();
+    public void erase() {     // if the eraser checkbox gets checked
         size = Double.parseDouble(brushSize.getText());
-        canvas.getApp().beginPath();
-        canvas.getApp().clearRect(e.getX(), e.getY(), size, size);
-        canvas.getApp().closePath();
+        canvas.setOnMousePressed(e -> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.getApp().beginPath();
+            canvas.getApp().moveTo(e.getX(), e.getY());
+            canvas.getApp().clearRect(e.getX(), e.getY(), size, size);
+            editMenu.updateUndoStack(canvas);
+        });
+        canvas.setOnMouseDragged(e -> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.getApp().clearRect(e.getX(), e.getY(), size, size);
+            editMenu.updateUndoStack(canvas);
+        });
+        canvas.setOnMouseReleased(e -> {
+            undo.setOnAction(ee->editMenu.undo(canvas));
+            canvas.getApp().lineTo(e.getX(), e.getY());
+            canvas.getApp().closePath();
+            editMenu.updateUndoStack(canvas);
+        });
+
+        if(!eraser.isSelected()) {pencil();}    // goes to default tool
     }
 
     public void onColorGrab() {      // gets a color of a pixel with mouse click
-        pixelColor.setText("");
+        pixelColor.setText("No Pixel Selected");
         if(colorGrabber.isSelected()) {
-            isToggled = true;
-            colorGrabber.setSelected(isToggled);
-            this.canvas.setOnMouseClicked(e-> {
+            colorGrabber.setSelected(true);
+            canvas.setOnMouseClicked(e-> {
                 WritableImage writ = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
                 canvas.snapshot(null, writ);     // takes screenshot of canvas
                 PixelReader p = writ.getPixelReader();
@@ -402,10 +444,30 @@ public class paintController implements Initializable {
             });
         }
         else {
-            isToggled = false;
-            colorGrabber.setSelected(isToggled);
+            colorGrabber.setSelected(false);
+            canvas.setOnMouseClicked(e-> {pixelColor.setText("No Pixel Selected");});
         }
     }
+
+    public void toggleDarkMode() {    // for toggling between dark and light mode
+        if(mode.isSelected()) {
+            mode.setSelected(true);
+            stage = (Stage) mode.getScene().getWindow();    // gets scene from AMPaint class
+            stage.getScene().getRoot().setStyle("-fx-accent: #1e74c6;" +     // goes to dark mode
+        "    -fx-focus-color: -fx-accent;" +
+        "    -fx-base: #373e43;" +
+        "    -fx-control-inner-background: derive(-fx-base, 35%);" +
+        "    -fx-control-inner-background-alt: -fx-control-inner-background;");
+            mode.setText("Light Mode");
+        }
+        else {  // reset
+            mode.setSelected(false);
+            mode.setText("Dark Mode");
+            stage.getScene().getRoot().setStyle("");    // goes back to light or "default" mode
+        }
+    }
+
+    public void setStage(Stage stage) {this.stage = stage;}
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -413,11 +475,17 @@ public class paintController implements Initializable {
 
         paintController.tabPane = new TabPane();
         
-        
+        //stage.setOnCloseRequest((Window w)-> {
+            //onClose();
+        //});
     }
 
     public static CanvasTab getCurrentTab(){
         return (CanvasTab)tabPane.getSelectionModel().getSelectedItem();
+    }
+
+    public static void removeCurrentTab() {
+        paintController.tabPane.getTabs().remove(paintController.getCurrentTab());
     }
     
 }

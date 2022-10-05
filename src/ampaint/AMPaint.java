@@ -11,8 +11,10 @@ public class AMPaint extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("paint.fxml"));
-        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("paint.fxml"));
+
+        Parent root = (Parent) fxmlLoader.load();
+        ((paintController) fxmlLoader.getController()).setStage(stage);   // for gettin the stage to the controller
         Scene scene = new Scene(root);
         
         stage.setTitle("AMPaint App");

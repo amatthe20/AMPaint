@@ -1,27 +1,67 @@
 package ampaint;
 
 import java.io.File;
+import java.util.Optional;
+import javafx.application.Platform;
+import javafx.event.Event;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.FileChooser;
 
 public class CanvasTab extends Tab {
+
+    private static FileChooser fileChooser;
 
     public File savedFile;
     public Image thisImage;
     public ScrollPane scroll;
-    public boolean isChanged;
-    public NewCanvas currentCanvas = new NewCanvas();
-    public Pane pane = new Pane();
+    public StackPane stack;
+    public String title;
+    public boolean isNotChanged;
+    public NewCanvas currentCanvas;
+    public Pane pane;
     
-    public CanvasTab(String label) {         // a new tab with canvas
-        super();
-        this.scroll = new ScrollPane();
-        this.pane.getChildren().add(this.currentCanvas);
-        this.scroll.setContent(this.pane);
-        this.setContent(this.scroll);
+    public CanvasTab() {         // a new tab with canvas
+        this.isNotChanged = true;
+        this.savedFile = null;
+        this.title = "Untitled Canvas";
+        this.currentCanvas = new NewCanvas();
+        setup();
+    }
 
+    public CanvasTab(File saved) {         // a new tab with canvas
+        this.isNotChanged = false;
+        this.savedFile = saved;
+        this.title = savedFile.getName();
+        this.currentCanvas = new NewCanvas();
+        setup();
+    }
+
+    private void setup() {
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files (*png,*jpg,*jpeg,*bmp)", "*.png", "*.jpg", "*.jpeg", "*.bmp"));
+        
+        this.pane = new Pane(currentCanvas);
+        this.stack = new StackPane();
+        this.stack.getChildren().addAll(pane);   //canvas -> canvasPane -> stackPane -> scroll
+        this.scroll = new ScrollPane(this.stack);
+
+        this.setContent(scroll);
+        this.setText((isNotChanged ? "*" : "") + this.title);
+        this.setOnCloseRequest((Event e) -> {
+            e.consume();            // consumes the normal event call
+            if(this.isNotChanged) {} // if there are unsaved changes, give a warning
+               //
+            else 
+                paintController.removeCurrentTab();
+        });
     }
 
     public void setImage(Image image) {       // for creating the canvas
@@ -37,8 +77,8 @@ public class CanvasTab extends Tab {
 
 
     public Pane getPane() {return pane;}
-    public Boolean getChanges(){return isChanged;}
-    public void setChanges(Boolean is){isChanged = is;}
+    public Boolean getChanges(){return isNotChanged;}
+    public void setChanges(Boolean is){isNotChanged = is;}
     public NewCanvas getCanvas(){return currentCanvas;}
 
 
