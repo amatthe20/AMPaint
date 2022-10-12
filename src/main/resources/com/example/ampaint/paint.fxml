@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.example.ampaint.NewCanvas?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="borderPane" minWidth="200.0" minHeight="200.0" fx:controller="com.example.ampaint.paintController">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="_File">
+                    <MenuItem accelerator="Shortcut+O" text="Open" onAction="#onOpenFile"/>
+                    <MenuItem accelerator="Shortcut+S" text="Save" onAction="#onSave"/>
+                    <MenuItem accelerator="Shortcut+Shift+S" text="Save As" onAction="#onSaveAs"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem accelerator="Escape" text="Close" onAction="#onClose"/>
+                </Menu>
+                <Menu text="_Edit">
+                    <MenuItem fx:id="undo" accelerator="Shortcut+Z" text="Undo" onAction="#undo"/>
+                    <MenuItem fx:id="redo" accelerator="Shortcut+Y" text="Redo" onAction="#redo"/>
+                    <MenuItem fx:id="cut" accelerator="Shortcut+X" text="Cut" />
+                    <MenuItem fx:id="copy" accelerator="Shortcut+C" text="Copy" onAction="#copy"/>
+                    <MenuItem fx:id="paste" accelerator="Shortcut+V" text="Paste" onAction="#paste"/>
+                </Menu>
+                <Menu text="_Tools">
+                    <MenuItem fx:id="pencil" accelerator="Shortcut+P" text="Pencil" onAction="#pencil"/>
+                    <Menu text="_Line">
+                        <MenuItem accelerator="Shortcut+H" text="Straight" onAction="#line"/>
+                        <MenuItem accelerator="Shortcut+D" text="Dashed" onAction="#dashed"/>
+                    </Menu>
+                </Menu>
+                <Menu text="_Shapes">
+                    <fx:define><ToggleGroup fx:id="shapeItems"/></fx:define>
+                    <RadioMenuItem accelerator="Shortcut+Q" toggleGroup="$shapeItems" text="Square" onAction="#aSquare"/>
+                    <RadioMenuItem accelerator="Shortcut+R" toggleGroup="$shapeItems" text="Rectangle" onAction="#aRectangle"/>
+                    <RadioMenuItem accelerator="Shortcut+Shift+C" toggleGroup="$shapeItems" text="Circle" onAction="#aCircle"/>
+                    <RadioMenuItem accelerator="Shortcut+E" toggleGroup="$shapeItems" text="Ellipse" onAction="#anEllipse"/>
+                    <RadioMenuItem accelerator="Shortcut+T" toggleGroup="$shapeItems" text="Triangle" onAction="#aTriangle"/>
+                    <RadioMenuItem accelerator="Shortcut+N" toggleGroup="$shapeItems" text="New Shape" onAction="#aShape"/>
+                </Menu>
+                <Menu text="Help">
+                    <MenuItem text="Help" onAction="#onHelp"/>
+                    <MenuItem text="About" onAction="#onAbout"/>
+                </Menu>
+                <Menu text="Extras">
+                    <RadioMenuItem fx:id="mode" text="Dark Mode" onAction="#toggleDarkMode"/>
+                </Menu>
+            </MenuBar>
+        </VBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab fx:id="tab" text="Untitled Canvas 1" closable="false">
+                <ScrollPane focusTraversable="false" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+                    <StackPane style="-fx-background-color: white;">
+                        <NewCanvas fx:id="canvas"/>
+                    </StackPane>
+                </ScrollPane>
+            </Tab>
+        </TabPane>
+    </center>
+
+    <right>
+        <ToolBar>
+            <VBox alignment="CENTER" spacing="8">
+                <Button fx:id="newTabButton" text="New Canvas" onAction="#addNewTab"/>
+                <TextField fx:id="brushSize" maxWidth="110" promptText="Stroke Thickness"/>
+                <ColorPicker fx:id="colorPicker"/>
+                <CheckBox fx:id="eraser" text="Eraser" onAction="#erase"/>
+                <Button text="Clear Canvas" onAction="#onClearCanvas"/>
+                <HBox alignment="CENTER" spacing="8">
+                    <Label fx:id="pixelColor" text="No Pixel Selected" alignment="BOTTOM_CENTER"/>
+                    <ToggleButton fx:id="colorGrabber" text="Color Grabber" onAction="#onColorGrab"/>
+                </HBox>
+                <HBox spacing="3">
+                    <TextField fx:id="width" maxWidth="90" promptText="Canvas Width"/>
+                    <TextField fx:id="height" maxWidth="92" promptText="Canvas Height"/>
+                    <Button text="Resize Canvas" onAction="#onResizeCanvas"/>
+                </HBox>
+                <Slider/>
+            </VBox>
+        </ToolBar>
+    </right>
+</BorderPane>
