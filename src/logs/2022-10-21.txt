@@ -1,0 +1,249 @@
+10/21/2022 01:02:01 New Log File: 2022-10-21.txt
+10/21/2022 01:02:01 AMPaint loaded successfully
+10/21/2022 01:02:01 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 01:02:24 (Untitled Canvas 1) Open
+10/21/2022 10:39:23 New Log File: 2022-10-21.txt
+10/21/2022 10:39:38 New Log File: 2022-10-21.txt
+10/21/2022 10:39:38 AMPaint loaded successfully
+10/21/2022 10:39:38 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:30:05 New Log File: 2022-10-21.txt
+10/21/2022 12:30:05 AMPaint loaded successfully
+10/21/2022 12:30:05 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:30:35 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:44:45 New Log File: 2022-10-21.txt
+10/21/2022 12:44:45 AMPaint loaded successfully
+10/21/2022 12:44:45 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:44:54 (Untitled Canvas 1) Opened materialdora.jpg
+10/21/2022 12:48:28 New Log File: 2022-10-21.txt
+10/21/2022 12:48:28 AMPaint loaded successfully
+10/21/2022 12:48:28 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:52:19 New Log File: 2022-10-21.txt
+10/21/2022 12:52:19 AMPaint loaded successfully
+10/21/2022 12:52:19 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:52:25 (Untitled Canvas 1) Opened materialdora.jpg
+10/21/2022 12:52:30 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 12:52:31 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 12:52:31 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 12:52:32 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 12:52:32 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 12:52:33 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 12:52:33 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 12:52:36 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 12:52:38 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:38 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:39 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:39 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:40 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 12:52:40 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 12:52:41 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 12:52:41 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 12:52:46 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:47 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:47 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:47 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:48 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:48 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:48 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:52:49 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:58:31 New Log File: 2022-10-21.txt
+10/21/2022 12:58:31 AMPaint loaded successfully
+10/21/2022 12:58:31 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 12:58:42 (Untitled Canvas 1) Opened materialspongebabe.jpg
+10/21/2022 12:59:05 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 12:59:06 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 12:59:20 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:59:21 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 12:59:23 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 12:59:24 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 13:01:09 New Log File: 2022-10-21.txt
+10/21/2022 13:01:09 AMPaint loaded successfully
+10/21/2022 13:01:09 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 13:01:19 (Untitled Canvas 1) Opened meme.jpg
+10/21/2022 13:01:50 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 13:01:51 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 13:02:00 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 13:02:41 (Untitled Canvas 1) Canvas resized to 600 x 700
+10/21/2022 13:02:45 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:02:47 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:02:59 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:02:59 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:03:01 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 13:03:02 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 13:03:03 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 13:03:05 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:03:05 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:03:12 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:03:13 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:03:14 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:03:15 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:05:32 New Log File: 2022-10-21.txt
+10/21/2022 13:05:32 AMPaint loaded successfully
+10/21/2022 13:05:32 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 13:06:09 (Untitled Canvas 1) Opened materialdora.jpg
+10/21/2022 13:06:11 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 13:06:12 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 13:06:12 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 13:06:12 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 13:06:13 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 13:06:14 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 13:06:14 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 13:06:15 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:06:16 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 13:06:17 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 14:31:00 New Log File: 2022-10-21.txt
+10/21/2022 14:31:00 AMPaint loaded successfully
+10/21/2022 14:31:00 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 14:31:21 (Untitled Canvas 1) Opened materialanimal.jpg
+10/21/2022 14:32:02 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:32:15 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 14:32:16 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 14:38:55 New Log File: 2022-10-21.txt
+10/21/2022 14:38:55 AMPaint loaded successfully
+10/21/2022 14:38:55 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 14:40:29 (Untitled Canvas 1) Opened materialanimal.jpg
+10/21/2022 14:43:36 New Log File: 2022-10-21.txt
+10/21/2022 14:43:36 AMPaint loaded successfully
+10/21/2022 14:43:36 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 14:43:48 (Untitled Canvas 1) Opened materialanimal.jpg
+10/21/2022 14:48:44 New Log File: 2022-10-21.txt
+10/21/2022 14:48:44 AMPaint loaded successfully
+10/21/2022 14:48:44 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 14:49:07 (Untitled Canvas 1) Opened materialspongebabe.jpg
+10/21/2022 14:49:14 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:49:15 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:49:20 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:49:20 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:49:30 (Untitled Canvas 1) Canvas rotated left 90 degrees
+10/21/2022 14:50:19The end of the AMPaint session.
+10/21/2022 14:50:28 (Untitled Canvas 1) Opened essaymeme.png
+10/21/2022 14:51:56 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:51:57 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 14:59:29 New Log File: 2022-10-21.txt
+10/21/2022 14:59:29 AMPaint loaded successfully
+10/21/2022 14:59:29 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 14:59:49 (Untitled Canvas 1) Opened materialspongebabe.jpg
+10/21/2022 14:59:59 (Untitled Canvas 1) Canvas resized to 900 x 900
+10/21/2022 15:00:02 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:00:05 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:00:46 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:00:50 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:01:07 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:01:15 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:01:22 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:01:28 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:06:44 New Log File: 2022-10-21.txt
+10/21/2022 15:06:44 AMPaint loaded successfully
+10/21/2022 15:06:44 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 15:18:35The end of the AMPaint session.
+10/21/2022 15:49:56 New Log File: 2022-10-21.txt
+10/21/2022 15:49:56 AMPaint loaded successfully
+10/21/2022 15:49:56 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 15:51:02 (Untitled Canvas 1) Opened thor.jpg
+10/21/2022 15:51:19 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:51:39 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:51:39 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:51:41 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 15:54:36 New Log File: 2022-10-21.txt
+10/21/2022 15:54:36 AMPaint loaded successfully
+10/21/2022 15:54:36 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:03:56 New Log File: 2022-10-21.txt
+10/21/2022 16:03:56 AMPaint loaded successfully
+10/21/2022 16:03:56 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:06:53 New Log File: 2022-10-21.txt
+10/21/2022 16:06:53 AMPaint loaded successfully
+10/21/2022 16:06:53 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:07:09 (Untitled Canvas 1) Save
+10/21/2022 16:07:22 (Untitled Canvas 1) SaveAs
+10/21/2022 16:07:22 (Untitled Canvas 1) SaveAs
+10/21/2022 16:10:44 New Log File: 2022-10-21.txt
+10/21/2022 16:10:44 AMPaint loaded successfully
+10/21/2022 16:10:44 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:15:02 New Log File: 2022-10-21.txt
+10/21/2022 16:15:02 AMPaint loaded successfully
+10/21/2022 16:15:02 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:15:42 New Log File: 2022-10-21.txt
+10/21/2022 16:15:42 AMPaint loaded successfully
+10/21/2022 16:15:42 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:19:35 New Log File: 2022-10-21.txt
+10/21/2022 16:19:35 AMPaint loaded successfully
+10/21/2022 16:19:35 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:23:15 New Log File: 2022-10-21.txt
+10/21/2022 16:23:15 AMPaint loaded successfully
+10/21/2022 16:23:15 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:26:06 New Log File: 2022-10-21.txt
+10/21/2022 16:26:06 AMPaint loaded successfully
+10/21/2022 16:26:06 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:31:38 New Log File: 2022-10-21.txt
+10/21/2022 16:31:38 AMPaint loaded successfully
+10/21/2022 16:31:38 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:32:02 New Log File: 2022-10-21.txt
+10/21/2022 16:32:02 AMPaint loaded successfully
+10/21/2022 16:32:02 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:32:51 New Log File: 2022-10-21.txt
+10/21/2022 16:32:51 AMPaint loaded successfully
+10/21/2022 16:32:51 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:35:06 New Log File: 2022-10-21.txt
+10/21/2022 16:35:06 AMPaint loaded successfully
+10/21/2022 16:35:06 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:38:12 New Log File: 2022-10-21.txt
+10/21/2022 16:38:12 AMPaint loaded successfully
+10/21/2022 16:38:12 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:38:39 New Log File: 2022-10-21.txt
+10/21/2022 16:38:39 AMPaint loaded successfully
+10/21/2022 16:38:39 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:39:58 New Log File: 2022-10-21.txt
+10/21/2022 16:39:58 AMPaint loaded successfully
+10/21/2022 16:39:58 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:41:53 New Log File: 2022-10-21.txt
+10/21/2022 16:41:53 AMPaint loaded successfully
+10/21/2022 16:41:53 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 16:46:09 New Log File: 2022-10-21.txt
+10/21/2022 16:46:09 AMPaint loaded successfully
+10/21/2022 16:46:09 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 17:01:33 New Log File: 2022-10-21.txt
+10/21/2022 17:01:33 AMPaint loaded successfully
+10/21/2022 17:01:33 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 17:02:32 New Log File: 2022-10-21.txt
+10/21/2022 17:02:32 AMPaint loaded successfully
+10/21/2022 17:02:32 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 17:04:20 New Log File: 2022-10-21.txt
+10/21/2022 17:04:20 AMPaint loaded successfully
+10/21/2022 17:04:20 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 17:06:31 New Log File: 2022-10-21.txt
+10/21/2022 17:06:31 AMPaint loaded successfully
+10/21/2022 17:06:31 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 17:08:39 New Log File: 2022-10-21.txt
+10/21/2022 17:08:39 AMPaint loaded successfully
+10/21/2022 17:08:39 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 17:10:30 New Log File: 2022-10-21.txt
+10/21/2022 17:10:30 AMPaint loaded successfully
+10/21/2022 17:10:30 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 20:26:50 New Log File: 2022-10-21.txt
+10/21/2022 20:26:50 AMPaint loaded successfully
+10/21/2022 20:26:50 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 20:31:24 (Untitled Canvas 1) Opened materialspongebabe.jpg
+10/21/2022 20:31:33 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 20:31:36 (Untitled Canvas 1) Canvas rotated 180 degrees
+10/21/2022 20:31:39 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 20:31:56 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 20:32:06 (Untitled Canvas 1) Canvas rotated right 90 degrees
+10/21/2022 20:32:08 (Untitled Canvas 1) Canvas flipped vertically
+10/21/2022 20:32:11 (Untitled Canvas 1) Canvas flipped vertically
+10/21/2022 20:32:13 (Untitled Canvas 1) Canvas flipped horizontally
+10/21/2022 20:32:15 (Untitled Canvas 1) Canvas flipped horizontally
+10/21/2022 20:49:16 New Log File: 2022-10-21.txt
+10/21/2022 20:49:16 AMPaint loaded successfully
+10/21/2022 20:49:16 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 20:49:33 (Untitled Canvas 1) Opened thor.jpg
+10/21/2022 21:05:52 New Log File: 2022-10-21.txt
+10/21/2022 21:05:52 AMPaint loaded successfully
+10/21/2022 21:05:52 (Untitled Canvas 1) Pencil tool activated
+10/21/2022 21:06:38 (Untitled Canvas 1) Opened materialspongebabe.jpg
+10/21/2022 21:06:56 (Untitled Canvas 1) Canvas rotated 270 degrees
+10/21/2022 21:06:59 (Untitled Canvas 1) Canvas rotated left 90 degrees

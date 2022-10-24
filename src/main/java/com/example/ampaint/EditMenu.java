@@ -3,6 +3,7 @@ package com.example.ampaint;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
 import java.util.Stack;
@@ -49,7 +50,7 @@ public class EditMenu {
      * @param canvas the current canvas
      */
     public static void updateUndoStack(NewCanvas canvas) {
-        double x = canvas.getScaleX(); // stores original x and y scales to reset after save
+        double x = canvas.getScaleX();  // stores original x and y scales to reset after save
         double y = canvas.getScaleY();
         canvas.setScaleX(1);            // briefly sets canvas scale to default to avoid saving errors
         canvas.setScaleY(1);
@@ -74,13 +75,11 @@ public class EditMenu {
         });
 
         canvas.setOnMouseDragged(e-> {
-            //undo(canvas);
             canvas.drawRectangle(e.getX(),e.getY(),e.getX(),e.getY());
             updateUndoStack(canvas);
         });
 
         canvas.setOnMouseReleased(e-> {
-            //undo(canvas);
             clipboard = canvas.getRegion(0,0,e.getX(),e.getY());
             updateUndoStack(canvas);
         });

@@ -2,8 +2,6 @@ package com.example.ampaint;
 
 import javafx.event.ActionEvent;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Cursor;
-import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -21,10 +19,8 @@ import java.util.Optional;
  */
 public class NewCanvas extends Canvas {
     protected GraphicsContext app;
-    private boolean isClickedFirst = true;
     private double angle;
     private int sides;
-    private TextInputDialog shape1, shape2;
 
     /** Canvas constructor. */
     public NewCanvas() {
@@ -35,23 +31,19 @@ public class NewCanvas extends Canvas {
         EditMenu.updateUndoStack(this);
     }
 
-    public void select(Scene scene) {
-        scene.setCursor(Cursor.CROSSHAIR);
-    }
-
     /**
      * Places image on canvas using x,y coordinates.
      * @param can canvas
      * @param x x coordinate of mouse position
      * @param y y coordinate of mouse position
      */
-    public void drawImageAt(Image can, double x, double y){this.app.drawImage(can, x, y);}
+    public void drawImageAt(Image can, double x, double y) {this.app.drawImage(can, x, y);}
 
     /**
      * Places image on canvas.
      * @param im imported image from computer
      */
-    public void drawImage(Image im){   // for setting an image to the canvas
+    public void drawImage(Image im) {   // for setting an image to the canvas
         this.setWidth(im.getWidth());
         this.setHeight(im.getHeight());
         this.app.drawImage(im, 0, 0);
@@ -102,25 +94,15 @@ public class NewCanvas extends Canvas {
      * Sets the canvas's dimensions from the current tab.
      */
     public void updateDimensions() {     // sets image in current tab
-        if(paintController.getCurrentTab().thisImage != null) {
-            this.setHeight(paintController.getCurrentTab().thisImage.getHeight());
-            this.setWidth(paintController.getCurrentTab().thisImage.getWidth());
-        } else {
-            this.setHeight(0);
-            this.setWidth(0);
+        if(PaintController.getCurrentTab().thisImage != null) {
+            this.setHeight(PaintController.getCurrentTab().thisImage.getHeight());
+            this.setWidth(PaintController.getCurrentTab().thisImage.getWidth());
         }
+        else {this.setHeight(0); this.setWidth(0);}
     }
 
     /**
-     * Sets the canvas's dimensions from the imported image from user's computer.
-     * @param i imported image from computer
-     */
-    public void updateDimensions(Image i) {
-        setDimensions((int) i.getWidth(), (int) i.getHeight());
-    }
-
-    /**
-     * Displays alert when user clicks its button that will clear the canvas.
+     * Displays alert when button is clicked that warns user about clearing the canvas.
      */
     public void clearCanvas() {       // when the user wants to start over
         Alert clear = new Alert(Alert.AlertType.CONFIRMATION);
@@ -133,11 +115,8 @@ public class NewCanvas extends Canvas {
 
         clear.getButtonTypes().setAll(yes, no);    // 2 options
         Optional<ButtonType> result = clear.showAndWait();
-        if (result.get() == yes) {
-            this.app.clearRect(0, 0, this.getWidth(), this.getHeight());
-        } else if (result.get() == no) {
-            // nothing
-        }
+        if(result.get() == yes) {this.app.clearRect(0, 0, this.getWidth(), this.getHeight());}    // clears canvas
+        else if(result.get() == no) {}  // nothing
     }
 
     /**
@@ -174,9 +153,7 @@ public class NewCanvas extends Canvas {
      * @param x2 final x coordinate of the mouse
      * @param y2 final y coordinate of the mouse
      */
-    public void drawSquare(double x1, double y1, double x2, double y2) {
-        drawShape(4.0,4,x1,y1,x2,y2);
-    }
+    public void drawSquare(double x1, double y1, double x2, double y2) {drawShape(4.0,4,x1,y1,x2,y2);}
 
     /**
      * Draws a triangle from mouse coordinates.
@@ -185,9 +162,7 @@ public class NewCanvas extends Canvas {
      * @param x2 final x coordinate of the mouse
      * @param y2 final y coordinate of the mouse
      */
-    public void drawTriangle(double x1, double y1, double x2, double y2) {
-        drawShape(6.0,3,x1,y1,x2,y2);
-    }
+    public void drawTriangle(double x1, double y1, double x2, double y2) {drawShape(6.0,3,x1,y1,x2,y2);}
 
     /**
      * Draws a regular sided polygon from mouse coordinates.
@@ -215,20 +190,20 @@ public class NewCanvas extends Canvas {
      * Sets the polygon's angle from user input.
      */
     public void setShapeAngle() {    // for drawShape function (gets the angle)
-        this.shape1 = new TextInputDialog("Enter number as double (i.e. 5.0)");
-        this.shape1.setTitle("New Shape");
-        this.shape1.setHeaderText("Enter the preferred angle over pi");
-        final Button ok = (Button) this.shape1.getDialogPane().lookupButton(ButtonType.OK);
+        TextInputDialog shape1 = new TextInputDialog("Enter number as double (i.e. 5.0)");
+        shape1.setTitle("New Shape");
+        shape1.setHeaderText("Enter the preferred angle over pi");
+        final Button ok = (Button) shape1.getDialogPane().lookupButton(ButtonType.OK);
         ok.addEventFilter(ActionEvent.ACTION, event ->
-                System.out.println("OK was pressed from shape angle dialog")
+                LoggerHandle.getLoggerHandle().writeToLog(true,"OK was pressed from shape angle dialog")
         );
 
-        final Button cancel = (Button) this.shape1.getDialogPane().lookupButton(ButtonType.CANCEL);
+        final Button cancel = (Button) shape1.getDialogPane().lookupButton(ButtonType.CANCEL);
         cancel.addEventFilter(ActionEvent.ACTION, event ->
-                System.out.println("Cancel was pressed from shape angle dialog")
+                LoggerHandle.getLoggerHandle().writeToLog(true,"Cancel was pressed from shape sides dialog")
         );
 
-        Optional<String> result = this.shape1.showAndWait();
+        Optional<String> result = shape1.showAndWait();
         if (result.isPresent()) {
             try {     // if the input is a double
                 this.angle = Double.parseDouble(shape1.getEditor().getText());
@@ -248,20 +223,20 @@ public class NewCanvas extends Canvas {
      * Sets the polygon's sides from user input.
      */
     public void setShapeSides() {       // for drawShape function (gets the sides)
-        shape2 = new TextInputDialog("Enter number as an integer (i.e. 5)");
+        TextInputDialog shape2 = new TextInputDialog("Enter number as an integer (i.e. 5)");
         shape2.setTitle("New Shape");
         shape2.setHeaderText("Enter the number of sides");
-        final Button ok = (Button) this.shape2.getDialogPane().lookupButton(ButtonType.OK);
+        final Button ok = (Button) shape2.getDialogPane().lookupButton(ButtonType.OK);
         ok.addEventFilter(ActionEvent.ACTION, event ->
-                System.out.println("OK was pressed from shape sides dialog")
+                LoggerHandle.getLoggerHandle().writeToLog(true,"OK was pressed from shape sides dialog")
         );
 
-        final Button cancel = (Button) this.shape2.getDialogPane().lookupButton(ButtonType.CANCEL);
+        final Button cancel = (Button) shape2.getDialogPane().lookupButton(ButtonType.CANCEL);
         cancel.addEventFilter(ActionEvent.ACTION, event ->
-                System.out.println("Cancel was pressed from shape sides dialog")
+                LoggerHandle.getLoggerHandle().writeToLog(true,"Cancel was pressed from shape sides dialog")
         );
 
-        Optional<String> result = this.shape2.showAndWait();
+        Optional<String> result = shape2.showAndWait();
         if (result.isPresent()) {
             try {     // if the input is a double
                 this.sides = Integer.parseInt(shape2.getEditor().getText());
@@ -311,33 +286,29 @@ public class NewCanvas extends Canvas {
      * Sets the color of the stroke.
      * @param color color value
      */
-    public void setLineColor(Color color){this.app.setStroke(color);}      // color setter
+    public void setLineColor(Color color) {this.app.setStroke(color);}      // color setter
 
     /**
      * Gets the current color of the stroke.
      * @return color value
      */
-    public Color getLineColor(){return (Color)this.app.getStroke();}       // color getter
+    public Color getLineColor() {return (Color)this.app.getStroke();}       // color getter
 
     /**
      * Sets the thickness of the stroke.
      * @param width width value
      */
-    public void setLineWidth(double width){this.app.setLineWidth(width);}  // width setter
+    public void setLineWidth(double width) {this.app.setLineWidth(width);}  // width setter
 
     /**
      * Gets the current thickness of the stroke.
      * @return width value
      */
-    public double getLineWidth(){return this.app.getLineWidth();}          // width getter
+    public double getLineWidth() {return this.app.getLineWidth();}          // width getter
 
     /**
      * Gets the canvas's GraphicsContext.
      * @return the app
      */
     public GraphicsContext getApp() {return app;}
-
-    @Override
-    public boolean isResizable() {return true;}
 }
-

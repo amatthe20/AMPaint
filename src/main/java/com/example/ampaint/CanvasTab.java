@@ -47,19 +47,22 @@ public class CanvasTab extends Tab {
         fileChooser.setTitle("Open Image");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files (*png,*jpg,*jpeg,*bmp)", "*.png", "*.jpg", "*.jpeg", "*.bmp"));
 
-        this.pane = new Pane(currentCanvas);
+        this.pane = new Pane(this.currentCanvas);
         this.stack = new StackPane();
-        this.stack.getChildren().addAll(pane);   //canvas -> canvasPane -> stackPane -> scroll
+        this.stack.setStyle("-fx-background-color: white;");
+        this.stack.getChildren().addAll(this.pane);
         this.scroll = new ScrollPane(this.stack);
 
-        this.setContent(scroll);
-        this.setText((isNotChanged ? "*" : "") + this.title);
+        this.setContent(this.scroll);
+        this.setText((this.isNotChanged ? "*" : "") + this.title);
         this.setOnCloseRequest((Event e) -> {
             e.consume();            // consumes the normal event call
-            if(this.isNotChanged) {} // if there are unsaved changes, give a warning
-            // paintController.onSaveAs();
+            if(this.isNotChanged) {
+                PaintController paint = new PaintController();
+                paint.onSaveAs();
+            }
             else
-                paintController.removeCurrentTab();
+                PaintController.removeCurrentTab();
         });
     }
 
@@ -74,8 +77,11 @@ public class CanvasTab extends Tab {
     }
 
 
+
+
     public Pane getPane() {return pane;}
-    public Boolean getChanges(){return isNotChanged;}
-    public void setChanges(Boolean is){isNotChanged = is;}
-    public NewCanvas getCanvas(){return currentCanvas;}
+    public Boolean getChanges() {return isNotChanged;}
+    public void setChanges(Boolean is) {isNotChanged = is;}
+    public NewCanvas getCanvas() {return currentCanvas;}
+    public StackPane getStack() {return stack;}
 }
