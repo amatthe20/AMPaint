@@ -1,128 +1,128 @@
-AMPaint Version 1.5.0  (Final Sprint)
+AMPaint Version 1.3.0  (Final Sprint)
 
 New Features:
-Mouse Coordinates - When the mouse is on the canvas, there are coordinates of it in the bottom left corner.
-If the mouse isn't on the canvas, there will be no coordinates (No Canvas Detected).
-Zoom In - Canvas gets zoomed in.
-Zoom Out - Canvas gets zoomed out.
+- Mouse Coordinates - When the mouse is on the canvas, there are coordinates of it in the bottom left corner.
+- If the mouse isn't on the canvas, there will be no coordinates (No Canvas Detected).
+- Zoom In - Canvas gets zoomed in.
+- Zoom Out - Canvas gets zoomed out.
 
 Links:
 https://youtu.be/SV4_U8LhXI8 (Demo)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-AMPaint Version 1.3.0  (Sprint 6)
+AMPaint Version 1.2.5  (Sprint 6)
 
 New Features:
-Image Icons
-Tooltips for buttons in toolbar
-Canvas rotation (90,180,270)
-Mirror images
-Threaded logging 
+- Image Icons
+- Tooltips for buttons in toolbar
+- Canvas rotation (90,180,270)
+- Mirror images
+- Threaded logging 
 
 Known Issues:
-Undo doesn't work with the rotation. It would go back to the original orientation instead of saving the rotation.
+- Undo doesn't work with the rotation. It would go back to the original orientation instead of saving the rotation.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-AMPaint Version 1.2.5  (Sprint 5)
-
-New Features: <br>
->3 Unit Tests <br>
-JavaDoc commentation <br>
-Save in different format <br>
-Warning image <br>
-
-Known Issues: <br>
-User has to spam undo and redo to get it working correctly. <br>
-
-Next Sprint:
-Icon buttons
-Tooltips for buttons in toolbar
-Canvas rotation (90,180,270)
-Mirror images
-Threaded logging
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-AMPaint Version 1.1.0  (Sprint 4)
+AMPaint Version 1.2.0  (Sprint 5)
 
 New Features:
-Undo and Redo using Stack
-Initial canvas on loadup
-New Shape (stay tuned)
-Draw regular sided polygon with n number of sides
+- >3 Unit Tests
+- JavaDoc commentation
+- Save in different format
+- Warning image 
 
 Known Issues:
-On startup, there is a tab but it will not implement other canvases when button is pressed.
-Undo doesn't undo.
-There is a canvas on loadup but it's transparent.
+- User has to spam undo and redo to get it working correctly.
 
 Next Sprint:
-3 Unit Tests
-Autosave timer (visible)
-JavaDoc commentation
-Save in different format
-Warning image
+- Icon buttons
+- Tooltips for buttons in toolbar
+- Canvas rotation (90,180,270)
+- Mirror images
+- Threaded logging
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AMPaint Version 1.1.5  (Sprint 4)
+
+New Features:
+- Undo and Redo using Stack
+- Initial canvas on loadup
+- New Shape (stay tuned)
+- Draw regular sided polygon with n number of sides
+
+Known Issues:
+- On startup, there is a tab but it will not implement other canvases when button is pressed.
+- Undo doesn't undo.
+- There is a canvas on loadup but it's transparent.
+
+Next Sprint:
+- 3 Unit Tests
+- Autosave timer (visible)
+- JavaDoc commentation
+- Save in different format
+- Warning image
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 AMPaint Version 1.1.0  (Sprint 3)
 
 New Features:
-Keyboard Shortcuts for the File Menu
-Tabs (open multiple canvases at once)
-New Shapes (square, rectangle, circle, ellipse)
-New Dashed Line tool
-Color Grabber
-Clear Canvas button on toolbar
+- Keyboard Shortcuts for the File Menu
+- Tabs (open multiple canvases at once)
+- New Shapes (square, rectangle, circle, ellipse)
+- New Dashed Line tool
+- Color Grabber
+- Clear Canvas button on toolbar
 
 Known Issues:
-The save option doesn't save to desktop.
-On startup, there is a tab but it will not implement other canvases when button is pressed.
-There is a bug with the shapes when clicking the eraser.
+- The save option doesn't save to desktop.
+- On startup, there is a tab but it will not implement other canvases when button is pressed.
+- There is a bug with the shapes when clicking the eraser.
 
 Next Sprint:
-Undo and Redo using Stack
-Initial canvas on loadup
-New Shape (stay tuned)
-Draw regular sided polygon with n number of sides
-Copy and Paste
-Select and Move a piece of the image
+- Undo and Redo using Stack
+- Initial canvas on loadup
+- New Shape (stay tuned)
+- Draw regular sided polygon with n number of sides
+- Copy and Paste
+- Select and Move a piece of the image
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 AMPaint Version 1.0.5  (Sprint 2)
 
 New Features:
-Menubar for Help and About
-Free Draw and Line Tools
-Canvas resizes to imported image
-Scroll bars on the canvas
+- Menubar for Help and About
+- Free Draw and Line Tools
+- Canvas resizes to imported image
+- Scroll bars on the canvas
 
 Known Issues:
-The save option doesn't save to desktop.
-Importing a new image will erase current canvas.
+- The save option doesn't save to desktop.
+- Importing a new image will erase current canvas.
 
 Next Sprint:
-Keyboard Shortcuts for the File Menu
-Tabs (open multiple canvases at once)
-Allow for multiple images on a canvas
-New Shapes (square, rectangle, ellipse)
-Rescale canvas
+- Keyboard Shortcuts for the File Menu
+- Tabs (open multiple canvases at once)
+- Allow for multiple images on a canvas
+- New Shapes (square, rectangle, ellipse)
+- Rescale canvas
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 AMPaint Version 1.0.0 (Beta)(Sprint 1)
 
 New Features:
-Draw on canvas with different colors
-Eraser checkbox
-Menubar for File, Open, Save, Save As
-Open an image file
-Save image
-Save the image as a file to your laptop
+- Draw on canvas with different colors
+- Eraser checkbox
+- Menubar for File, Open, Save, Save As
+- Open an image file
+- Save image
+- Save the image as a file to your laptop
 
 Known Issues:
-You can only upload certain images.
-The save option doesn't save to desktop.
+- You can only upload certain images.
+- The save option doesn't save to desktop.
 
 Next Sprint:
-Fix save option
-Add another menubar for help and about
-Scale the canvas to the imported image
-Add Scroll bar
+- Fix save option
+- Add another menubar for help and about
+- Scale the canvas to the imported image
+- Add Scroll bar
