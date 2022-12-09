@@ -1,0 +1,44 @@
+AMPaint Version 1.5.0  (Final) <br>
+
+New Features: <br>
+Mouse Coordinates - When the mouse is on the canvas, there are coordinates of it in the bottom left corner. <br>
+If the mouse isn't on the canvas, there will be no coordinates (No Canvas Detected). <br>
+Zoom In - Canvas gets zoomed in. <br>
+Zoom Out - Canvas gets zoomed out. <br>
+
+Links: <br>
+https://youtu.be/SV4_U8LhXI8 (Demo) <br>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- <br>
+AMPaint Version 1.3.0  (Sprint 6) <br>
+
+New Features: <br>
+Image Icons <br>
+Tooltips for buttons in toolbar <br>
+Canvas rotation (90,180,270) <br>
+Mirror images <br>
+Threaded logging <br>
+
+Known Issues: <br>
+Undo doesn't work with the rotation. It would go back to the original orientation instead of saving the rotation. <br>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------ <br>
+AMPaint Version 1.2.5  (Sprint 5) <br>
+
+New Features: <br>
+>3 Unit Tests <br>
+JavaDoc commentation <br>
+Save in different format <br>
+Warning image <br>
+
+Known Issues: <br>
+User has to spam undo and redo to get it working correctly. <br>
+
+Next Sprint:
+Icon buttons
+Tooltips for buttons in toolbar
+Canvas rotation (90,180,270)
+Mirror images
+Threaded logging
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------ <br>
