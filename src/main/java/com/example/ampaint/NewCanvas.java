@@ -71,6 +71,14 @@ public class NewCanvas extends Canvas {
         return iv.getImage();
     }
 
+    /**
+     * Gets the rectangle taken from the canvas.
+     * @param x1 initial x coordinate
+     * @param y1 initial y coordinate
+     * @param x2 final x coordinate
+     * @param y2 final y coordinate
+     * @return the partial snapshot
+     */
     public Image getRegion(double x1, double y1, double x2, double y2) {
         SnapshotParameters snap = new SnapshotParameters();
         WritableImage writ = new WritableImage((int)Math.abs(x1-x2), (int)Math.abs(y1-y2));
@@ -88,17 +96,6 @@ public class NewCanvas extends Canvas {
     public void setDimensions(int width, int height) {     // for resizing canvas
         this.setWidth(width);
         this.setHeight(height);
-    }
-
-    /**
-     * Sets the canvas's dimensions from the current tab.
-     */
-    public void updateDimensions() {     // sets image in current tab
-        if(PaintController.getCurrentTab().thisImage != null) {
-            this.setHeight(PaintController.getCurrentTab().thisImage.getHeight());
-            this.setWidth(PaintController.getCurrentTab().thisImage.getWidth());
-        }
-        else {this.setHeight(0); this.setWidth(0);}
     }
 
     /**
@@ -128,6 +125,17 @@ public class NewCanvas extends Canvas {
     public void drawDashedLine(double size, double x, double y) {     // drawing a dashed line
         this.app.setLineDashes(3*size);
         this.app.setLineDashOffset(4);
+        this.app.lineTo(x, y);
+    }
+
+    /**
+     * Resets dash properties.
+     * @param x x coordinate of the mouse
+     * @param y y coordinate of the mouse
+     */
+    public void unDashLine(double x, double y) {
+        this.app.setLineDashes(0);
+        this.app.setLineDashOffset(0);
         this.app.lineTo(x, y);
     }
 

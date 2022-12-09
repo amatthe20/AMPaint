@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.*?>
 
 <?import com.example.ampaint.NewCanvas?>
-<?import com.example.ampaint.CanvasTab?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" id="borderPane" minWidth="200.0" minHeight="200.0" fx:controller="com.example.ampaint.PaintController">
     <top>
         <VBox>
@@ -14,21 +13,14 @@
                     <MenuItem fx:id="save" accelerator="Shortcut+S" text="Save" onAction="#onSave"/>
                     <MenuItem fx:id="saveAs" accelerator="Shortcut+Shift+S" text="Save As" onAction="#onSaveAs"/>
                     <SeparatorMenuItem/>
+                    <MenuItem fx:id="stop" accelerator="Shortcut+W" text="Stop Current Thread" onAction="#onStop"/>
                     <MenuItem fx:id="close" accelerator="Escape" text="Close" onAction="#onClose"/>
                 </Menu>
                 <Menu text="_Edit">
                     <MenuItem fx:id="undo" accelerator="Shortcut+Z" text="Undo" onAction="#undo"/>
                     <MenuItem fx:id="redo" accelerator="Shortcut+Y" text="Redo" onAction="#redo"/>
-                    <MenuItem fx:id="cut" accelerator="Shortcut+X" text="Cut" /> <!-- TODO  -->
                     <MenuItem fx:id="copy" accelerator="Shortcut+C" text="Copy" onAction="#copy"/>
                     <MenuItem fx:id="paste" accelerator="Shortcut+V" text="Paste" onAction="#paste"/>
-                </Menu>
-                <Menu text="_Tools">
-                    <MenuItem fx:id="pencil" accelerator="Shortcut+P" text="Pencil" onAction="#pencil"/>
-                    <Menu text="_Line">
-                        <MenuItem fx:id="straight" accelerator="Shortcut+H" text="Straight" onAction="#line"/>
-                        <MenuItem fx:id="dashed" accelerator="Shortcut+D" text="Dashed" onAction="#dashed"/>
-                    </Menu>
                 </Menu>
                 <Menu text="_Shapes">
                     <fx:define><ToggleGroup fx:id="shapeItems"/></fx:define>
@@ -61,31 +53,39 @@
     </top>
 
     <center>
-        <TabPane fx:id="tabPane">
-            <CanvasTab fx:id="tab">
-                <ScrollPane fx:id="scroll">
-                    <StackPane fx:id="stack" style="-fx-background-color: white;">
-                        <NewCanvas fx:id="canvas"/>
-                    </StackPane>
-                </ScrollPane>
-            </CanvasTab>
-        </TabPane>
+        <ScrollPane fx:id="scroll">
+            <StackPane fx:id="stack" style="-fx-background-color: white;">
+                <NewCanvas fx:id="canvas"/>
+            </StackPane>
+        </ScrollPane>
     </center>
 
     <right>
         <ToolBar>
             <VBox alignment="CENTER" spacing="8">
-                <Button fx:id="newTabButton" text="New Canvas" onAction="#addNewTab"/>
                 <TextField fx:id="brushSize" text="10" maxWidth="110" promptText="Stroke Thickness">
                     <tooltip><Tooltip text="Set the width of the stroke."/></tooltip>
                 </TextField>
                 <ColorPicker fx:id="colorPicker">
                     <tooltip><Tooltip text="Select a color from the palette or make your own color."/></tooltip>
                 </ColorPicker>
-                <CheckBox fx:id="eraser" onAction="#erase">
-                    <tooltip><Tooltip text="Erase some of the picture and replace with the background color."/></tooltip>
-                </CheckBox>
-                <Button text="Clear" onAction="#onClearCanvas"/>
+                <HBox alignment="CENTER" spacing="10">
+                    <CheckBox fx:id="pencil" onAction="#pencil">
+                        <tooltip><Tooltip text="Draw a free form line with the stroke width."/></tooltip>
+                    </CheckBox>
+                    <CheckBox fx:id="straight" onAction="#line">
+                        <tooltip><Tooltip text="Draw a straight line with the stroke width."/></tooltip>
+                    </CheckBox>
+                    <CheckBox fx:id="dashed" onAction="#dashed">
+                        <tooltip><Tooltip text="Draw a dashed line with the stroke width."/></tooltip>
+                    </CheckBox>
+                    <CheckBox fx:id="eraser" onAction="#erase">
+                        <tooltip><Tooltip text="Erase some of the picture and replace with the background color."/></tooltip>
+                    </CheckBox>
+                </HBox>
+                <Button text="Clear" onAction="#onClearCanvas">
+                    <tooltip><Tooltip text="Clear the canvas and start over."/></tooltip>
+                </Button>
                 <HBox alignment="CENTER" spacing="8">
                     <Label fx:id="pixelColor" text="No Pixel Selected" alignment="BOTTOM_CENTER"/>
                     <ToggleButton fx:id="colorGrabber" text="Color Grabber" onAction="#onColorGrab">
@@ -104,8 +104,12 @@
                     </Button>
                 </HBox>
                 <HBox spacing="3">
-                    <Button text="Zoom In" onAction="#zoomIn"/>
-                    <Button text="Zoom Out" onAction="#zoomOut"/>
+                    <Button fx:id="in" maxWidth="20" onAction="#zoomIn">
+                        <tooltip><Tooltip text="Zoom In"/></tooltip>
+                    </Button>
+                    <Button fx:id="out" maxWidth="20" onAction="#zoomOut">
+                        <tooltip><Tooltip text="Zoom Out"/></tooltip>
+                    </Button>
                 </HBox>
             </VBox>
         </ToolBar>

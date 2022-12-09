@@ -24,7 +24,7 @@ public class HelpMenu {
         ScrollPane scroll = new ScrollPane(about);
         about.getChildren().add(new Text("Welcome to AMPaint!\n" // user can learn about the app and see the version
                 + "This is a Paint application where you can draw for fun.\n\n\n"
-                + "Version 1.3.0"));
+                + "Version 1.5.0"));
         scroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         Scene aboutBox = new Scene(scroll, 400, 300);                  // size of the window
@@ -53,8 +53,6 @@ public class HelpMenu {
                 + "Redo - Redoes current edit on canvas\n"
                 + "Copy - Gets selected image and copies it to clipboard\n"
                 + "Paste - Places selected image from clipboard on canvas\n\n"
-                + "Tools Menu:\n" + "Pencil - Draw on canvas\n"
-                + "Line - Draws a kind of line as specified (straight or dashed)\n\n"
                 + "Shapes Menu:\n"
                 + "Square - Draw a square from mouse drag\n"
                 + "Rectangle - Draw a rectangle from mouse drag\n"
@@ -76,6 +74,9 @@ public class HelpMenu {
                 + "ToolBar:\n"
                 + "New Canvas button for opening a new canvas in a different tab\n"
                 + "TextField for line thickness\n" + "Color Chooser for changing the color of the stroke\n"
+                + "Pencil checkbox for activating the pencil\n"
+                + "Straight line checkbox for activating the straight line tool\n"
+                + "Dashed line checkbox for activating the dashed line tool\n"
                 + "Eraser checkbox for activating the eraser\n"
                 + "Clear Canvas button to erase the image but user can still draw on the blank canvas\n"
                 + "Color Grabber button to get the color on a pixel with a mouse click\n"

@@ -72,4 +72,16 @@ public class ImageIcons {
         image.setPreserveRatio(true);
         box.setGraphic(image);
     }
+
+    /**
+     * Sets the graphic for a Label.
+     * @param label label
+     * @param icon imported image
+     */
+    public ImageIcons(Label label, Image icon) {
+        ImageView image = new ImageView(icon);
+        image.setFitWidth(15);
+        image.setFitHeight(15);
+        label.setGraphic(image);
+    }
 }

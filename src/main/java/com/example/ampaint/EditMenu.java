@@ -3,7 +3,6 @@ package com.example.ampaint;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
 import java.util.Stack;
@@ -20,7 +19,7 @@ public class EditMenu {
     /**
      * Undoes current edit by "popping" the edited canvas back on the undo stack. This canvas will get pushed down the redo stack.
      * If it's the first edit, the canvas will be pushed down the undo stack.
-     * @param canvas the current canvas
+     * @param canvas current canvas
      */
     public static void undo(NewCanvas canvas) {
         Image im = undoStack.pop();
@@ -35,7 +34,7 @@ public class EditMenu {
 
     /**
      * Redoes current edit by "popping" the old canvas back on the undo stack. This canvas will get pushed down again.
-     * @param canvas the current canvas
+     * @param canvas current canvas
      */
     public static void redo(NewCanvas canvas) {
         if(!redoStack.isEmpty()) {
@@ -68,7 +67,7 @@ public class EditMenu {
      */
     public static void copy(NewCanvas canvas) {
         canvas.setOnMousePressed(e-> {
-            canvas.setLineColor(Color.RED);
+            canvas.setLineColor(Color.RED);    // used to see the drawn rectangle on the canvas
             canvas.setLineWidth(5);
             canvas.drawRectangle(e.getX(),e.getY(),e.getX(),e.getY());
             updateUndoStack(canvas);
@@ -80,19 +79,19 @@ public class EditMenu {
         });
 
         canvas.setOnMouseReleased(e-> {
-            clipboard = canvas.getRegion(0,0,e.getX(),e.getY());
+            clipboard = canvas.getRegion(0,0,e.getX(),e.getY());    // adds image to clipboard
             updateUndoStack(canvas);
         });
 
     }
 
     /**
-     * Displays copied canvas snapshot unto canvas
+     * Displays copied canvas snapshot unto canvas.
      */
     public static void paste(NewCanvas canvas) {
         canvas.setOnMouseClicked(e-> {
             try {
-                canvas.drawImageAt(clipboard, e.getX(), e.getY());
+                canvas.drawImageAt(clipboard, e.getX(), e.getY());       // displays copied image from clipboard
             }
             catch(Exception p) {
                 System.out.println(e);
@@ -100,18 +99,4 @@ public class EditMenu {
             updateUndoStack(canvas);
         });
     }
-
-    /*public static void cut(NewCanvas canvas) {      // TODO
-        canvas.setOnMousePressed(e-> {
-
-        });
-
-        canvas.setOnMouseDragged(e-> {
-
-        });
-
-        canvas.setOnMouseReleased(e-> {
-
-        });
-    }*/
 }

@@ -1,0 +1,156 @@
+12/05/2022 11:17:57 New Log File: 2022-12-05.txt
+12/05/2022 11:17:57 AMPaint loaded successfully
+12/05/2022 11:17:57 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 13:16:12 New Log File: 2022-12-05.txt
+12/05/2022 13:16:12 AMPaint loaded successfully
+12/05/2022 13:16:12 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 13:16:57 (Untitled Canvas 1) Opened materialdora.jpg
+12/05/2022 13:17:01 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 13:17:12 (Untitled Canvas 1) Canvas cleared
+12/05/2022 13:17:18 (Untitled Canvas 1) Canvas resized to 800 x 900
+12/05/2022 13:17:45 (Untitled Canvas 1) Opened meme.jpg
+12/05/2022 13:18:30 (Untitled Canvas 1) Color Grabber toggled on
+12/05/2022 13:18:33 (Untitled Canvas 1) Color Grabber toggled on
+12/05/2022 13:18:35 (Untitled Canvas 1) Color Grabber toggled off
+12/05/2022 13:18:49 (Untitled Canvas 1) Canvas rotated right 90 degrees
+12/05/2022 13:18:56 (Untitled Canvas 1) Canvas rotated left 90 degrees
+12/05/2022 13:19:00 (Untitled Canvas 1) Canvas rotated 180 degrees
+12/05/2022 13:19:02 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 13:19:05 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 13:19:07 (Untitled Canvas 1) Canvas flipped vertically
+12/05/2022 13:19:10 (Untitled Canvas 1) Canvas flipped vertically
+12/05/2022 13:19:12 (Untitled Canvas 1) Canvas flipped horizontally
+12/05/2022 13:19:19 (Untitled Canvas 1) Dark Mode toggled on
+12/05/2022 13:19:23 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 13:19:23 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 13:19:31 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 13:19:33 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 13:19:36 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 13:19:37 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:32:38 New Log File: 2022-12-05.txt
+12/05/2022 15:32:38 AMPaint loaded successfully
+12/05/2022 15:32:38 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:32:44 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:00 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:01 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:33:09 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:33:09 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:09 (Untitled Canvas 1) Eraser unchecked
+12/05/2022 15:33:10 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:12 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:13 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 15:33:16 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 15:33:17 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:33:20 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:33:21 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:35 (Untitled Canvas 1) Opened materialspongebabe.jpg
+12/05/2022 15:33:38 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:41 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:33:51 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:52 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:33:55 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:33:56 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:34:07 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:34:09 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:34:09 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:34:09 (Untitled Canvas 1) Eraser unchecked
+12/05/2022 15:34:10 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:34:11 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:34:17 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:34:17 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:34:17 (Untitled Canvas 1) Eraser unchecked
+12/05/2022 15:34:18 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:34:21 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:34:22 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:46:07 New Log File: 2022-12-05.txt
+12/05/2022 15:46:07 AMPaint loaded successfully
+12/05/2022 15:46:07 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:46:17 (Untitled Canvas 1) Opened materialanimal.jpg
+12/05/2022 15:46:20 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:46:27 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:46:29 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:46:29 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:46:29 (Untitled Canvas 1) Eraser unchecked
+12/05/2022 15:46:36 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:46:36 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:46:36 (Untitled Canvas 1) Eraser unchecked
+12/05/2022 15:46:38 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:49:39 New Log File: 2022-12-05.txt
+12/05/2022 15:49:39 AMPaint loaded successfully
+12/05/2022 15:49:39 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:49:49 (Untitled Canvas 1) Opened materialdora.jpg
+12/05/2022 15:50:00 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:50:04 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:50:05 (Untitled Canvas 1) Eraser checked
+12/05/2022 15:57:49 New Log File: 2022-12-05.txt
+12/05/2022 15:57:49 AMPaint loaded successfully
+12/05/2022 15:57:49 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:58:58 (Untitled Canvas 1) Opened materialanimal.jpg
+12/05/2022 15:59:06 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:59:18 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:59:20 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:59:32 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 15:59:32 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 15:59:43 (Untitled Canvas 1) Opened materialspongebabe.jpg
+12/05/2022 15:59:54 (Untitled Canvas 1) Canvas resized to 600 x 600
+12/05/2022 16:00:32 (Untitled Canvas 1) Square selected
+12/05/2022 16:00:42 (Untitled Canvas 1) Rectangle selected
+12/05/2022 16:00:54 (Untitled Canvas 1) Circle selected
+12/05/2022 16:01:21 (Untitled Canvas 1) Canvas cleared
+12/05/2022 16:01:48 (Untitled Canvas 1) Dark Mode toggled on
+12/05/2022 16:01:50 (Untitled Canvas 1) Dark Mode toggled off
+12/05/2022 16:01:52 (Untitled Canvas 1) Dark Mode toggled on
+12/05/2022 16:02:01 (Untitled Canvas 1) Ellipse selected
+12/05/2022 16:02:11 (Untitled Canvas 1) Opened meme.jpg
+12/05/2022 16:02:23 (Untitled Canvas 1) Ellipse selected
+12/05/2022 16:02:29 (Untitled Canvas 1) Triangle selected
+12/05/2022 16:02:50 (Untitled Canvas 1) OK was pressed from shape angle dialog
+12/05/2022 16:02:53 (Untitled Canvas 1) OK was pressed from shape sides dialog
+12/05/2022 16:02:53 (Untitled Canvas 1) New Shape selected
+12/05/2022 16:03:06 (Untitled Canvas 1) Canvas rotated right 90 degrees
+12/05/2022 16:03:07 (Untitled Canvas 1) Canvas rotated left 90 degrees
+12/05/2022 16:03:08 (Untitled Canvas 1) Canvas rotated 180 degrees
+12/05/2022 16:03:09 (Untitled Canvas 1) Canvas rotated 180 degrees
+12/05/2022 16:03:09 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:10 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:11 (Untitled Canvas 1) Canvas flipped vertically
+12/05/2022 16:03:12 (Untitled Canvas 1) Canvas flipped horizontally
+12/05/2022 16:03:13 (Untitled Canvas 1) Canvas rotated left 90 degrees
+12/05/2022 16:03:14 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:15 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:16 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:16 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:17 (Untitled Canvas 1) Canvas rotated 270 degrees
+12/05/2022 16:03:19 (Untitled Canvas 1) Canvas flipped horizontally
+12/05/2022 16:03:20 (Untitled Canvas 1) Canvas flipped horizontally
+12/05/2022 16:03:28 (Untitled Canvas 1) Canvas flipped horizontally
+12/05/2022 16:04:32 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 16:04:33 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 16:04:43 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 16:04:44 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 16:04:45 (Untitled Canvas 1) Dashed Line tool activated
+12/05/2022 16:04:46 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 16:04:54 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 16:04:55 (Untitled Canvas 1) Eraser checked
+12/05/2022 16:05:04 (Untitled Canvas 1) Canvas cleared
+12/05/2022 16:05:13 (Untitled Canvas 1) Opened essaymeme.png
+12/05/2022 16:05:17 (Untitled Canvas 1) Canvas rotated right 90 degrees
+12/05/2022 16:05:18 (Untitled Canvas 1) Canvas rotated right 90 degrees
+12/05/2022 16:05:22 (Untitled Canvas 1) Eraser checked
+12/05/2022 16:05:22 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 16:05:22 (Untitled Canvas 1) Eraser unchecked
+12/05/2022 16:05:24 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 16:06:07 (Untitled Canvas 1) Canvas resized to 800 x 800
+12/05/2022 16:06:25 (Untitled Canvas 1) Straight Line tool activated
+12/05/2022 16:06:26 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 16:06:58 (Untitled Canvas 1) Opened materialdora.jpg
+12/05/2022 16:07:07 (Untitled Canvas 1) Dark Mode toggled off
+12/05/2022 16:07:27 (Untitled Canvas 1) Canvas cleared
+12/05/2022 16:07:40 (Untitled Canvas 1) Pencil tool activated
+12/05/2022 16:07:43 (Untitled Canvas 1) Color Grabber toggled on
+12/05/2022 16:07:45 (Untitled Canvas 1) Color Grabber toggled on
+12/05/2022 16:07:50 (Untitled Canvas 1) Color Grabber toggled off
+12/05/2022 16:08:07 (Untitled Canvas 1) Canvas cleared
+12/05/2022 16:08:32 (Untitled Canvas 1) SaveAs
+12/05/2022 16:08:32 (Untitled Canvas 1) SaveAs
+12/05/2022 16:08:37 (Untitled Canvas 1) Save
